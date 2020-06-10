@@ -37,18 +37,18 @@ class User {
 		if($userId && (intval($userId) > 0)){
 
 			//инициализируем новый обьект класса Moder
-		$send = new Moder;
-	//вызываем функцию отправки письма для обьекта
-	$result = $send->sendEmail($first_name,$last_name,$email);
-	//проверяем отправилось ли пиьсмо
-	if($result){
-		echo $userId;
-	} else {
-		echo "Проблема с отправкой письма на почту";
-		echo $userId;
+			$send = new Moder;
+			//вызываем функцию отправки письма для обьекта
+			$result = $send->sendEmail($first_name,$last_name,$email);
+			//проверяем отправилось ли пиьсмо
+			if($result){
+				echo $userId;
+			} else {
+				echo "Проблема с отправкой письма на почту";
+				echo $userId;
+			}
+		}
 	}
-}
-}
 
 //проверка валидности почты
 public function checkEmail($email){
