@@ -5,8 +5,8 @@ var lname = $('.lastname');
 var email_val = $('.email');
 
 $("#but").click(function(e){
-  e.preventDefault(); 
-  $.ajax({
+  e.preventDefault(); // прерываем перезагрузку страницы
+  $.ajax({    // функция отпраки принятых значений
     type: 'POST',
    url: '../db.php',
     dataType: "json",
@@ -16,7 +16,7 @@ $("#but").click(function(e){
         email : email_val.val()}, 
    
     success: function(result){
-      alert("Thank you for your form: " + fname.val());
+      alert("Thank you for your form: " + fname.val()); //в случае успеха выводим значения
     }
   });
 
